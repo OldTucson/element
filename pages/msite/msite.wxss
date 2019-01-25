@@ -1,0 +1,118 @@
+/* pages/msite/msite.wxss */
+.types-swiper {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.types {
+  display: flex;
+  flex-wrap: wrap;
+}
+.type {
+  width: 25%;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.type image {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 10rpx;
+}
+.shops{
+  margin-top: 20rpx;
+  padding: 20rpx;
+  border: 1px solid #eee;
+  
+}
+.shops .shops-title{
+  font-size: 30rpx;
+  color: #999;
+  border-bottom: 1px solid #eee;
+}
+.shops .shop{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+  font-size: 20rpx;
+  color: #999;
+}
+.shops .shop .shop-pic>image{
+  height: 130rpx;
+  width: 130rpx;
+}
+.shops .shop .shop-desc{
+  flex: 7.5;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 130rpx;
+  margin-left: 20rpx;
+}
+.shops .shop .shop-desc>view{
+  display: flex;
+  justify-content: space-between;
+}
+.shops .shop .shop-desc .shop-desc-mid .rate-count{
+  margin: 0 16rpx;
+}
+.shops .shop .shop-desc .shop-desc-mid .rate{
+  position: relative;
+  display: inline-block;
+  height: 16rpx;
+  width:100rpx;
+}
+.shops .shop .shop-desc .shop-desc-mid .rate image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 16rpx;
+}
+.shops .shop .shop-desc .shop-desc-mid .rate .star{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 16rpx;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARUAAAArCAYAAABW6RyLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3Qzk5REI5NTFBRDIxMUU5OTg5RUI3RkE1MTlFRjMxOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3Qzk5REI5NjFBRDIxMUU5OTg5RUI3RkE1MTlFRjMxOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdDOTlEQjkzMUFEMjExRTk5ODlFQjdGQTUxOUVGMzE4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdDOTlEQjk0MUFEMjExRTk5ODlFQjdGQTUxOUVGMzE4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ID0VvAAAB9FJREFUeNrsXc1rJEUU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") no-repeat left center / 100rpx 16rpx;
+
+}
+.shops .shop .shop-desc .shop-desc-top .brand{
+  font-size: 24rpx;
+  color: #333;
+  background: #ffd930;
+  font-weight: bolder;
+  display: inline-block;
+  padding: 2rpx;
+  margin-right: 10rpx;
+}
+.shops .shop .shop-desc .shop-desc-top .name{
+  font-size: 30rpx;
+  font-weight: bolder;
+  color: #333;
+}
+.shops .shop .shop-desc .shop-desc-mid .rate-count{
+  color: #ff6000;
+}
+.shops .shop .shop-desc .shop-desc-mid .method{
+  font-size: 18rpx;
+  display: inline-block;
+  padding: 2rpx;
+}
+.shops .shop .shop-desc .shop-desc-mid .method1{
+  color: white;
+  background: #3190e8;
+  
+}
+.shops .shop .shop-desc .shop-desc-mid .method2{
+  padding: 0 2rpx;
+  margin-left: 2rpx;
+  color: #3190e8;
+  border: 1px solid #3190e8;
+  
+}
+.shops .shop .shop-desc .shop-desc-bot .time{
+  color: #3190e8;
+}

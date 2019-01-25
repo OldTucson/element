@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/shop/shop",
+    "pages/city/city",
+    "pages/msite/msite",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/demo/demo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3190e8",
+    "navigationBarTitleText": "饿了吧",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#444",
+    "selectedColor": "#17abe3",
+    "list": [
+          {
+            "pagePath": "pages/msite/msite",
+            "text": "外卖",
+            "iconPath": "./img/index.png",
+            "selectedIconPath": "./img/index_selected.png"
+          },
+          {
+            "pagePath": "pages/demo/demo",
+            "text": "用户",
+            "iconPath": "./img/user.png",
+            "selectedIconPath": "./img/user_selected.png"
+          }
+      ]
+  },
+  "networkTimeout": {
+    "request": "10000"
+  }
+}

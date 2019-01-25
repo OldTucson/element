@@ -1,0 +1,72 @@
+.box{
+  background-color: rgb(241, 241, 241);
+}
+.guess-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  color: #999;
+  font-size: 26rpx;
+  border-bottom: 1px solid #eee;
+}
+.guess-city{
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.guess-city navigator{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  font-size: 34rpx;
+}
+.guess-city navigator text:nth-child(1){
+  color: #3190e8;
+}
+.guess-city navigator text:nth-child(2){
+  color: #999;
+}
+.guess-title,.guess-city,.hot-title,.hot-cities,.group-cities{
+  background-color: #f5f5f5;
+}
+.hot-title{
+  padding: 20rpx;
+  color: #999;
+  font-size: 26rpx;
+  border-bottom: 1px solid #eee;
+  border-top: 2px solid #eee;
+}
+.hot-cities{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-cities navigator,.group-cities .group-city .group-item{
+  width: 25%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #3190e8;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  font-size: 34rpx;
+ 
+}
+.group-titile{
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding: 10rpx;
+}
+.group-cities{
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 20rpx 0;
+}
+.group-cities .group-city{
+  display: flex;
+  flex-wrap: wrap;
+}
+.group-cities .group-city .group-item{
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

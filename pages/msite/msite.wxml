@@ -1,0 +1,56 @@
+<swiper
+  class='types-swiper' indicator-dots="true" indicator-color="#555" indicator-active-color="#3190e8" autoplay='true' circular="true" interval='{{interval}}'
+>
+  <block wx:for="{{foodTypes}}" wx:for-item="types" wx:key="index">
+    <swiper-item class="types">
+      <view class='type' wx:for="{{types}}" wx:for-item="type" wx:key="index">
+        <image src="https://fuss10.elemecdn.com{{type.image_url}}"></image>
+        <text>{{type.title}}</text>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='shops'>
+  <text class='shops-title'>附近商家</text>
+  <navigator url="/pages/shop/shop?id={{item.id}}" class='shop' wx:for="{{restaurants}}" wx:key="{{item.id}}" data-shopinfo="{{item}}" bindtap='setShopInfo'>
+    <view class='shop-pic'>
+      <image src='//elm.cangdu.org/img/{{item.image_path}}'></image>
+    </view>
+    <view class='shop-desc'>
+      <view class='shop-desc-top'>
+        <view>
+          <text class='brand'>品牌</text>
+          <text class='name'>{{item.name}}</text>
+        </view>
+        <text class='text-icon'>
+          <text wx:for="{{item.supports}}" wx:key="index" wx:for-item="support">{{support.icon_name}} </text>
+        </text>
+      </view>
+      <view class='shop-desc-mid'>
+        <view>
+          <view class='rate'>
+            <image src='/img/star2.png'></image>
+            <view class='star' style='width:{{item.rating/5*100}}%'></view>
+          </view>
+          <text class='rate-count'>{{item.rating}}</text>
+          <text class='sale-count'>月售{{item.recent_order_num}}单</text>
+        </view>
+        <view wx:if="{{item.delivery_mode}}">
+          <text class='method1 method'>蜂鸟专送</text>
+          <text class='method2 method'>准时达</text>
+        </view>
+      </view>
+      <view class='shop-desc-bot'>
+        <view class='price'>
+          <text>￥{{item.float_minimum_order_amount}}起送 / {{item.piecewise_agent_fee.tips}}</text>
+        </view>
+        <view>
+          <text class='distance'>{{item.distance}}/</text>
+          <text class='time'>{{item.order_lead_time}}</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  
+</view>

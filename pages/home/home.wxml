@@ -1,0 +1,22 @@
+<!--pages/home/home.wxml-->
+<view class='box'>
+  <view class='guess-title'>
+    <text>当前定位城市：</text>
+    <text>定位不准时，请在城市列表中选择</text>
+  </view>
+  <view class='guess-city'>
+    <navigator url='/pages/city/city?id={{guessCity.id}}'><text>{{guessCity}}</text><text>></text></navigator>
+  </view>
+  
+  <view class='hot-title'>热门城市</view>
+  <view class='hot-cities'>
+    <navigator url='/pages/city/city?id={{city.id}}' class='hot-city' wx:for="{{hotCities}}" wx:for-item="city" wx:key="{{city.id}}">{{city.name}}</navigator>
+  </view>
+
+  <view class='group-cities' wx:for="{{cities}}" wx:key="{{item[0]}}">
+    <view class='group-titile'>{{item[0]}}</view>
+    <view class='group-city'>
+    <navigator url='/pages/city/city?id={{city.id}}' class='group-item' wx:for="{{item[1]}}" wx:key="{{city.id}}" wx:for-item="city">{{city.name}}</navigator>
+    </view>
+  </view>
+</view>

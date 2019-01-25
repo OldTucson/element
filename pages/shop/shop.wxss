@@ -1,0 +1,21 @@
+.shop-info{
+  height: 230rpx;
+  background: #344409;
+}
+.scroll{
+  display: flex;
+  position: absolute;
+  top: 230rpx;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.scroll .types .type{
+  height: 180rpx;
+}
+.scroll .foods .food{
+  height: 200rpx;
+}
+.scroll .types .type.active{
+  border-left: 6rpx solid #3190e8;
+}
